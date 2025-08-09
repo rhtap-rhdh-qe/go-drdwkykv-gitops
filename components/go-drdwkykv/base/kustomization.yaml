@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-drdwkykv
+  janus-idp.io/tekton: go-drdwkykv
+  backstage.io/kubernetes-id: go-drdwkykv
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-drdwkykv
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
